@@ -1,0 +1,98 @@
+body {
+    background: linear-gradient(to right, #5ffcff, #7b7ffe); /* Gradient background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+header h1, header h2 {
+    margin: 0;
+    padding: 10px;
+    color: #47f6ff; /* Tomato color */
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-title {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    border: none;
+    background-color: rgba(255, 99, 71, 0.8); /* Tomato color */
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 165, 0, 0.8); /* Orange color */
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .slider {
+        width: 90%;
+    }
+
+    .card-img {
+        height: 200px;
+    }
+}
